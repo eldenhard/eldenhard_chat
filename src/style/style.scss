@@ -1,6 +1,8 @@
+@import 'primeicons/primeicons.css';
 :root {
   --main_background_color: #111827;
   --sidebar_background_color: #0D121B;
+  --color_grey_icon: #B4B4B4;
 }
 * {
   margin: 0;
@@ -9,10 +11,17 @@
 }
 body{
   background-color: var(--main_background_color);
+  font-family: 'Segoe UI', sans-serif;
 
 }
 
 .workspace{
   display: grid;
   grid-template-columns: 15% 85%;
+}
+.pi{
+  cursor: pointer;
+}
+button{
+  cursor: pointer;
 }
