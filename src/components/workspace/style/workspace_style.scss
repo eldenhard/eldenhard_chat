@@ -4,12 +4,15 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  position: relative;
+  // position: relative;
 }
 
 .block_answer {
   height: 90%;
+  padding: 6% 0;
+  overflow-y: auto; /* Прокрутка содержимого, если оно превышает высоту блока */
 }
+
 .search_block {
   position: relative;
   box-sizing: border-box;
@@ -19,21 +22,22 @@
   margin: 0 auto;
 }
 
-.search_block input {
+.search_block textarea {
   width: 100%;
-  padding: max(15px, 1.5vh);
+  padding: max(15px, 1vh);
   border-radius: var(--border_radius);
   background: var(--input_background_color);
   border: none;
-  color: var(--grey-100)
+  color: var(--grey-100);
 }
 
-.search_block input:focus {
+.search_block textarea:focus {
   outline: none;
 }
 
-.search_block input::placeholder {
+.search_block textarea::placeholder {
   font-size: 1rem;
+  margin: 0 auto;
 }
 
 .search_block button {
@@ -47,15 +51,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: background 0.5s ease;
-  &:disabled {
-    background: var(--button_background_disabled_color);
-  }
 }
 
-.active_button{
-    color: black;
+.search_block button:disabled {
+  background: var(--button_background_disabled_color);
+}
+
+.active_button {
+  color: black;
+}
+
+.message {
+  display: flex;
+  justify-content: flex-start;
+  margin: 5px 0;
+}
+
+.isUser {
+  justify-content: flex-end;
+  background: var(--blue-100);
+  width: auto;
+  margin-left: auto;
+  word-wrap: break-word; 
+  border-radius: var(--border_radius);
+}
+
+.message-content {
+  padding: .8%; 
+  word-wrap: break-word; 
+  box-sizing: border-box; 
 }

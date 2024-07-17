@@ -1,19 +1,27 @@
+
 <template>
   <div class="workspace_block">
-    <answerByAIVue />
-    <inputUserQuestions @update:loading="loading = $event" @update:error="error = $event"
-      @update:response="response = $event" />
+    <div class="block_answer">
+      <div v-for="message in messages" :key="message.content" :class="['message', { isUser: message.role === 'user' }]">
+        <div class="message-content">{{ message.content }}</div>
+      </div>
+    </div>
+    <inputUserQuestions @update:loading="loading = $event" @update:error="error = $event" @update:response="response = $event" />
     <div v-if="loading">Загрузка...</div>
     <div v-if="error">{{ error }}</div>
-    <div v-if="response">{{ response }}</div>
   </div>
-  
 </template>
+
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import answerByAIVue from './modules/answerByAI.vue'
 import inputUserQuestions from './modules/inputUserQuestions.vue'
+import { useUserChat } from '../../store/userChat';
+
+const messageInChat = useUserChat()
+let messages = messageInChat.messages
+console.log('res', messages)
+
 
 const loading = ref(false);
 const error = ref<string | null>(null);
