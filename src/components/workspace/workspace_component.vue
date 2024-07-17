@@ -1,18 +1,23 @@
 <template>
-    <div class="workspace_block">
-       <answerByAIVue />
-      <inputUserQuestionsVue />
-       
-    </div>
+  <div class="workspace_block">
+    <answerByAIVue />
+    <inputUserQuestions @update:loading="loading = $event" @update:error="error = $event"
+      @update:response="response = $event" />
+    <div v-if="loading">Загрузка...</div>
+    <div v-if="error">{{ error }}</div>
+    <div v-if="response">{{ response }}</div>
+  </div>
+  
 </template>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+import { ref } from 'vue'
 import answerByAIVue from './modules/answerByAI.vue'
-import inputUserQuestionsVue from './modules/inputUserQuestions.vue'
+import inputUserQuestions from './modules/inputUserQuestions.vue'
 
-// import Button from 'primevue/button';
-// import AutoComplete from 'primevue/autocomplete';
+const loading = ref(false);
+const error = ref<string | null>(null);
+const response = ref<string | null>(null);
 
 
 </script>

@@ -6,6 +6,8 @@ import PrimeVue from 'primevue/config';
 import Aura from '@primevue/themes/aura';
 import Lara from '@primevue/themes/lara';
 import Nora from '@primevue/themes/nora';
+import axios from 'axios'
+
 const app = createApp(App)
 const pinia = createPinia()
 

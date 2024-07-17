@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@primevue/themes": "^4.0.0-rc.2",
+    "@types/axios": "^0.14.0",
+    "axios": "^1.7.2",
+    "openai": "^4.0.0",
     "pinia": "^2.1.7",
     "primeicons": "^7.0.0",
     "primevue": "^4.0.0-rc.2",
