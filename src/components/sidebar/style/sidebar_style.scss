@@ -3,3 +3,7 @@
     width: 100%;
     background: var(--sidebar_background_color);
 }
+.collapse{
+    transition: display 1s ease-in-out;
+    display: none;
+}

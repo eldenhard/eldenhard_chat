@@ -1,8 +1,12 @@
 @import 'primeicons/primeicons.css';
 :root {
   --main_background_color: #111827;
+  --input_background_color: #192338;
   --sidebar_background_color: #0D121B;
   --color_grey_icon: #B4B4B4;
+
+  // border
+  --border_radius: 8px;
 }
 * {
   margin: 0;
