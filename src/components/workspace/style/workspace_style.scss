@@ -29,6 +29,8 @@
   background: var(--input_background_color);
   border: none;
   color: var(--grey-100);
+  
+  font-size: 1.2rem;
 }
 
 .search_block textarea:focus {
@@ -66,6 +68,7 @@
   display: flex;
   justify-content: flex-start;
   margin: 5px 0;
+  gap: .6vw;
 }
 
 .isUser {
@@ -78,7 +81,24 @@
 }
 
 .message-content {
-  padding: .8%; 
+  padding: .8% 2%; 
   word-wrap: break-word; 
   box-sizing: border-box; 
+}
+
+
+.sircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Ширина и высота круга */
+  height: 40px; /* Ширина и высота круга */
+  border-radius: 50%; /* Закругление до круга */
+  border: 1px solid var(--gray-300); /* Толщина и цвет бордера */
+  margin-right: 10px; /* Отступ справа */
+  flex-shrink: 0; /* Запрещает уменьшать размер элемента */
+}
+
+.pi-microchip-ai {
+  font-size: 1rem; /* Размер иконки */
 }

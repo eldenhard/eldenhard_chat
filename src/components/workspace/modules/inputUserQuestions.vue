@@ -21,11 +21,13 @@ const { loading, error, response, sendMessage } = useChatGPT();
 const emit = defineEmits(['update:loading', 'update:error', 'update:response']);
 
 const sendQuestionForAI = async () => {
+ 
     if (userQuestion.value.trim()) {
         messageInChat.saveMessageInChat({ role: 'user', content: userQuestion.value });
         const responseAI = await sendMessage(userQuestion.value);
-        messageInChat.saveMessageInChat({ role: 'assistant', content: responseAI });
         userQuestion.value = "";
+        messageInChat.saveMessageInChat({ role: 'assistant', content: responseAI });
+       
     }
 };
 

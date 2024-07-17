@@ -13,7 +13,6 @@ export const useUserChat = defineStore("userChat", {
   },
   actions: {
     saveMessageInChat(message: ChatMessage) {
-      console.log(message);
       this.messages.push(message);
     }
   }

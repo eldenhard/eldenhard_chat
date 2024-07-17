@@ -1,9 +1,11 @@
-
 <template>
   <div class="workspace_block">
     <div class="block_answer">
-      <div v-for="message in messages" :key="message.content" :class="['message', { isUser: message.role === 'user' }]">
-        <div class="message-content">{{ message.content }}</div>
+      <div v-for="message in messages" :key="message.content" class="message">
+        <div class="sircle" v-if="message.role === 'assistant'">
+          <i class="pi pi-microchip-ai"></i>
+        </div>
+        <span :class="['message-content', { isUser: message.role === 'user' }]">{{ message.content }}</span>
       </div>
     </div>
     <inputUserQuestions @update:loading="loading = $event" @update:error="error = $event" @update:response="response = $event" />
@@ -11,6 +13,7 @@
     <div v-if="error">{{ error }}</div>
   </div>
 </template>
+
 
 
 <script setup lang="ts">
