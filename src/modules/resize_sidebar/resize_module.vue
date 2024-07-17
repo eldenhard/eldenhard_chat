@@ -11,11 +11,11 @@
 
 
 <script setup>
-const emit = defineEmits(['resizeSidebar']);
+// const emit = defineEmits(['resizeSidebar']);
 
-const resizeSidebar = () => {
-  emit('resizeSidebar', 'collapse'); // передаем строку 'resize'
-};
+// const resizeSidebar = () => {
+//   emit('resizeSidebar', 'collapse'); // передаем строку 'resize'
+// };
 </script>
 
 <style scoped>
