@@ -56,11 +56,10 @@ export function useChatGPT() {
     }
   };
 
-
   return {
-    loading, 
-    error, 
-    response, 
+    loading,
+    error,
+    response,
     sendMessage,
   };
 }

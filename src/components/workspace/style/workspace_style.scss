@@ -49,7 +49,7 @@
   position: absolute;
   right: 0.8rem; /* Отступ от правого края инпута */
   background: var(--button_background_color);
-  padding: 0.5rem; /* Размер кнопки */
+  padding: 0.4rem; /* Размер кнопки */
   border: none;
   cursor: pointer;
   border-radius: 50%;
@@ -57,6 +57,9 @@
   align-items: center;
   justify-content: center;
   transition: background 0.5s ease;
+  &:hover{
+    background: var(--gray-500);
+  }
 }
 
 .search_block button:disabled {
@@ -97,7 +100,7 @@
   width: 40px; /* Ширина и высота круга */
   height: 40px; /* Ширина и высота круга */
   border-radius: 50%; /* Закругление до круга */
-  border: 1px solid var(--gray-300); /* Толщина и цвет бордера */
+  border: 1px solid #4e4e4e; /* Толщина и цвет бордера */
   margin-right: 10px; /* Отступ справа */
   flex-shrink: 0; /* Запрещает уменьшать размер элемента */
 }
