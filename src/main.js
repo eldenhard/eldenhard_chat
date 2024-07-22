@@ -7,13 +7,15 @@ import Aura from '@primevue/themes/aura';
 import Lara from '@primevue/themes/lara';
 import Nora from '@primevue/themes/nora';
 import axios from 'axios'
-
+import vue3Highlightjs from 'vue3-highlightjs'
+import 'highlight.js/styles/dracula.css'
 const app = createApp(App)
 const pinia = createPinia()
 
 
 app
 .use(pinia)
+.use(vue3Highlightjs)
 .use(PrimeVue, {
     theme: {
         preset: Aura

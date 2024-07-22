@@ -9,6 +9,17 @@
       </div>
     </div>
     <inputUserQuestions @update:loading="loading = $event" @update:error="error = $event" @update:response="response = $event" />
+    <p class="description">ChatGPT может допускать ошибки. Рекомендуем проверять важную информацию.</p>
+    <!-- <div v-highlightjs>
+    <code class="javascript">
+      <div>
+        <p class="typingEffect__line1">
+          function helloWorld() 
+        </p>
+      </div>
+    
+    </code>
+  </div> -->
     <div v-if="loading">Загрузка...</div>
     <div v-if="error">{{ error }}</div>
   </div>

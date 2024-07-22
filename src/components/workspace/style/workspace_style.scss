@@ -3,7 +3,9 @@
   width: 80%;
   margin: 0 auto;
   display: flex;
+  padding: 2% 0 1%;
   flex-direction: column;
+  
   // position: relative;
 }
 
@@ -29,8 +31,9 @@
   background: var(--input_background_color);
   border: none;
   color: var(--grey-100);
-  
+  resize: none;
   font-size: 1.2rem;
+
 }
 
 .search_block textarea:focus {
@@ -101,4 +104,50 @@
 
 .pi-microchip-ai {
   font-size: 1rem; /* Размер иконки */
+}
+
+
+code p {
+  width: 0;
+  margin-right: 5px;
+  overflow: hidden;
+  border-right: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.typingEffect__line1 {
+  animation: typing 2s steps(30) forwards, blink 1s 3;
+}
+
+.typingEffect__line2 {
+  animation: typing 2.5s steps(35) 3s forwards, blink 1s 3s 3;
+}
+
+.typingEffect__line3 {
+  animation: typing 0s 6s forwards, blink 1s 6s infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 45% {
+    border-color: transparent;
+  }
+  50%, 100% {
+    border-color: white;
+  }
+}
+
+.description{
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray-300);
+  margin-top: 1%;
 }
