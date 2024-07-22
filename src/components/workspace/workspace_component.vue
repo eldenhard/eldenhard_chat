@@ -8,8 +8,10 @@
         <span :class="['message-content', { isUser: message.role === 'user' }]">
           <div v-if="message.loading">
             <span v-show="message.role === 'assistant'">
-              Загрузка...
+              <div class="loader"></div>
             </span>
+          
+
           </div>
           <template v-else>
             {{ message.content }}
@@ -17,7 +19,8 @@
         </span>
       </div>
     </div>
-    <inputUserQuestions @update:loading="handleLoading" @update:error="error = $event" @update:response="handleResponse" />
+    <inputUserQuestions @update:loading="handleLoading" @update:error="error = $event"
+      @update:response="handleResponse" />
     <p class="description">ChatGPT может допускать ошибки. Рекомендуем проверять важную информацию.</p>
     <div v-if="error">{{ error }}</div>
   </div>
